@@ -2,7 +2,9 @@
 
 <h2>Description</h2>
 I created a target group for an Application Load Balancer, and then configured health checks for the target group. A listener routed requests from the load balancer to the target group, and then used Route 53 I configured health checks for the load balancer. Amazon Simple Notification Service (SNS) was implemented to notify me when a failure occurs, which I created a checked by simulating a web server failure.
-<p> The environment used contained a Virtual Private Cloud (VPC) with two public and two private subnets across two availability zones, an internet gateway, a web server in each public subnet, a security group applied to each web server, and an Application Load Balancer that has a security group applied.<br/>
+<br/>
+<br/>
+The environment used contained a Virtual Private Cloud (VPC) with two public and two private subnets across two availability zones, an internet gateway, a web server in each public subnet, a security group applied to each web server, and an Application Load Balancer that has a security group applied.<br/>
 <p align ="center"><img src="https://imgur.com/U8RJUyH.png" height="80%" width="80%" alt="health checks"/>
 <br/>
 <p>Elastic Load Balancing provides four different types of load balancers: an Application Load Balancer, a Network Load Balancer, a Classic Load Balancer, and a Gateway Load Balancer. Based on the environment and requirements, I used an Application Load Balancer because this is a web solution where monitoring is being done at Layer 7—the application layer.<br/>
